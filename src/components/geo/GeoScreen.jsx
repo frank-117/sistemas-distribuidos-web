@@ -103,7 +103,13 @@ const GeoScreen = () => {
                     </Form>
                 </Col>
                 <Col className="w-50 text-center">
-                    {geoResponse}
+                    {
+                        geoResponse
+                            ?
+                            <span className="mt-3">{geoResponse}</span>
+                            :
+                            <p className="mt-3 fst-italic">Your response will be displayed here</p>
+                    }
                 </Col>
             </Row>
         </Container>

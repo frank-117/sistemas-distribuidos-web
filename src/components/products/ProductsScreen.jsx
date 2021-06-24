@@ -4,14 +4,14 @@ import {Button, Col, Container, Form, Row} from "react-bootstrap";
 const ProductsScreen = () => {
 
     const [productId, setProductId] = useState('');
-    const [geoResponse, setGeoResponse] = useState('');
+    const [productsResponse, setProductsResponse] = useState('');
 
     const handleGetAllProductsSubmit = () => {
-        setGeoResponse('');
+        setProductsResponse('');
     };
 
     const handleGetProductInfoSubmit = () => {
-        setGeoResponse(productId);
+        setProductsResponse(productId);
     };
 
     return (
@@ -51,7 +51,13 @@ const ProductsScreen = () => {
                     </Form>
                 </Col>
                 <Col className="w-50 text-center" style={{marginTop: "-9%"}}>
-                    {geoResponse}
+                    {
+                        productsResponse
+                            ?
+                            <span>{productsResponse}</span>
+                            :
+                            <p className="fst-italic">Your response will be displayed here</p>
+                    }
                 </Col>
             </Row>
         </Container>

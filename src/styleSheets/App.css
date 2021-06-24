@@ -1,0 +1,19 @@
+.navbar {
+    box-shadow: 0 0 10px 0 black;
+}
+
+div.full-screen {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fill-full-space {
+    height: 100%;
+    width: 100%;
+}
+
+div.adjust-height {
+    top: 56px;
+    height: calc(100% - 56px);
+    width: 100%;
+}
